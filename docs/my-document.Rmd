@@ -62,6 +62,7 @@ colnames(bst_daten) <- col_names
 ```
 
 ## Beschäftigte
+---
 
 ```{r Beschaeftigte_Grafik, echo=FALSE, message=FALSE}
 library(ggplot2)
