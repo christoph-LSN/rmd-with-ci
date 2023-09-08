@@ -19,7 +19,7 @@ library("readxl")
 library(readxl)
 
 # Verwenden Sie den GitHub Raw-URL-Pfad zu Ihrer Excel-Datei
-data_url <- "https://raw.githubusercontent.com/christoph-LSN/rmd-with-ci/master/data/2022_Einbuergerung.xlsx"
+data_url <- "https://raw.githubusercontent.com/christoph-LSN/rmd-with-ci/blob/master/data/2022_Einbuergerung.xlsx"
 
 # Laden Sie die Daten aus dem GitHub Raw-URL
 data <- read_excel(data_url)
