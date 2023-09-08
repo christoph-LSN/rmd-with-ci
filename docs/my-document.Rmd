@@ -23,7 +23,7 @@ Die folgende Grafik zeigt die Entwicklung der Einbürgerungen in Niedersachsen i
 library("ggplot2")
 
 # Laden Sie die CSV-Datei aus dem Ordner "data" im Repository
-data <- read.csv("data/2022_Einbuergerung.csv")
+data <- read.csv("../data/2022_Einbuergerung.csv")
 
 # Die Monate in der richtigen Reihenfolge als Faktor erstellen
 data$Monat <- factor(data$Monat, levels = c("Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"))
