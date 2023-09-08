@@ -23,10 +23,10 @@ Die folgende Grafik zeigt die Entwicklung der Einbuergerungen in Niedersachsen i
 library("ggplot2")
 
 # Laden Sie die CSV-Datei aus dem Ordner "data" im Repository
-data <- read.csv("../data/2022_Einbuergerung.csv")
+data <- read.csv("../data/2022_Einbuergerung.csv", sep = ";")
 
 # Die Monate in der richtigen Reihenfolge als Faktor erstellen
-data$Monat <- factor(data$Monat, levels = c("Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"))
+data$Monat <- factor(data$Monat, levels = c("Januar", "Februar", "Maerz", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"))
 
 # Daten für die Berechnung der Differenzen vorbereiten
 data$Diff <- c(NA, diff(data$Einbuergerungen))
@@ -38,6 +38,7 @@ ggplot(data, aes(x = Monat, y = Einbuergerungen)) +
   labs(title = "Anzahl der monatlichen Einbürgerungen in Niedersachsen", x = "Monat", y = "Einbuergerungen") +
   theme_minimal() +  # Hintergrund weiß machen
   scale_x_discrete(guide = guide_axis(n.dodge = 2))  # Achsenabschnitte breiter machen
+
 
 ```
 
