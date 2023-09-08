@@ -1,4 +1,4 @@
-# Document editing with R Markdown + GitHub Actions
+ Document editing with R Markdown + GitHub Actions
 =====
 
 This repository holds a template for establishing a CI workflow towards collaborative document editing in R Markdown.
