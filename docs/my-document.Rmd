@@ -11,3 +11,18 @@ output:
 ---
 
 Word, Pdf, html, tex. Ich bin ja mal gespannt.
+
+
+```{r, load_Einbuergerungen, echo = True}
+library("readxl")
+
+library(readxl)
+
+# Verwenden Sie den GitHub Raw-URL-Pfad zu Ihrer Excel-Datei
+data_url <- "https://raw.githubusercontent.com/christoph-LSN/rmd-with-ci/main/data/2022_Einbuergerung.xlsx"
+
+# Laden Sie die Daten aus dem GitHub Raw-URL
+data <- read_excel(data_url)
+
+```
+
