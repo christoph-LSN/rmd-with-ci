@@ -41,4 +41,22 @@ ggplot(data, aes(x = Monat, y = Einbuergerungen)) +
 
 
 ```
+```{r load_bst_daten, echo = FALSE, message=FALSE}
 
+library(readxl)
+library(tidyverse)
+
+# Pfad zur Excel-Datei im "data" -Ordner
+excel_path <- "data/bst_hochrechnung.xlsx"
+
+# Tabellenblattname
+sheet_name <- "Zeitreihe Beschäftigte"
+
+# Daten einlesen aus den angegebenen Spalten
+bst_daten <- read_excel(excel_path, sheet = sheet_name, range = "A73:G173", col_names = FALSE) %>%
+  select(...1, ...2, ...7)  # Nur die gewünschten Spalten auswählen
+
+# Spaltenüberschriften setzen
+col_names <- c("Zeit", "Deutschland", "Niedersachsen")
+colnames(bst_daten) <- col_names
+```
