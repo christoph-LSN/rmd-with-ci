@@ -60,3 +60,24 @@ bst_daten <- read_excel(excel_path, sheet = sheet_name, range = "A73:G173", col_
 col_names <- c("Zeit", "Deutschland", "Niedersachsen")
 colnames(bst_daten) <- col_names
 ```
+
+## Beschäftigte
+
+```{r Beschaeftigte_Grafik, echo=FALSE, message=FALSE}
+library(ggplot2)
+
+# Liniendiagramm erstellen
+ggplot(bst_daten, aes(x = Zeit)) +
+  geom_line(aes(y = Deutschland, color = "Deutschland"), show.legend = FALSE) +
+  geom_point(aes(y = Deutschland, color = "Deutschland"), show.legend = FALSE) +
+  geom_line(aes(y = Niedersachsen, color = "Niedersachsen"), show.legend = FALSE) +
+  geom_point(aes(y = Niedersachsen, color = "Niedersachsen"), show.legend = FALSE) +
+  labs(title = "Beschäftigungsentwicklung in Deutschland und Niedersachsen",
+       x = "Zeit", y = "Beschäftigte",
+       caption = "Sozialversicherungspflichtig und ausschließlich geringfügig Beschäftigte") +
+  scale_color_manual(values = c("Deutschland" = "blue", "Niedersachsen" = "red")) +
+  theme_minimal() +
+  scale_y_continuous(labels = function(x) format(x, big.mark = ".", decimal.mark = ",", scientific = FALSE), limits = c(0, NA))
+
+```
+
