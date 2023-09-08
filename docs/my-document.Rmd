@@ -47,7 +47,7 @@ library(readxl)
 library(tidyverse)
 
 # Pfad zur Excel-Datei im "data" -Ordner
-excel_path <- "data/bst_hochrechnung.xlsx"
+excel_path <- "../data/bst_hochrechnung.xlsx"
 
 # Tabellenblattname
 sheet_name <- "Zeitreihe Beschäftigte"
