@@ -27,6 +27,7 @@ data <- read_excel(data_url)
 ```
 
 # Einbürgerungen in Niedersachsen
+---
 
 Die folgende Grafik zeigt die Entwicklung der Einbürgerungen in Niedersachsen in den vergangenen 12 Monaten.
 
@@ -47,5 +48,5 @@ ggplot(data, aes(x = Monat, y = Einbürgerungen, group = 1)) +
   labs(title = "Anzahl der monatlichen Einbürgerungen in Niedersachsen", x = "Monat", y = "Einbürgerungen") +
   theme_minimal() +  # Hintergrund weiß machen
   scale_x_discrete(guide = guide_axis(n.dodge = 2))  # Achsenabschnitte breiter machen
-
+```
 
