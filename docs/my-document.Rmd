@@ -29,14 +29,14 @@ data <- read.csv("../data/2022_Einbuergerung.csv")
 data$Monat <- factor(data$Monat, levels = c("Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"))
 
 # Daten für die Berechnung der Differenzen vorbereiten
-data$Diff <- c(NA, diff(data$Einbürgerungen))
+data$Diff <- c(NA, diff(data$Einbuergerungen))
 
-ggplot(data, aes(x = Monat, y = Einbürgerungen, group = 1)) +
+ggplot(data, aes(x = Monat, y = Einbuergerungen, group = 1)) +
   geom_line() +
   geom_point() +  # Datenpunkte hinzufügen
-  geom_text(aes(label = round(Einbürgerungen)), 
-            vjust = ifelse(data$Diff < 0, 1.5, -0.5 + ifelse(data$Einbürgerungen < 500, 0.4, ifelse(data$Monat == "Januar", 2.2, 0)))) +
-  labs(title = "Anzahl der monatlichen Einbürgerungen in Niedersachsen", x = "Monat", y = "Einbürgerungen") +
+  geom_text(aes(label = round(Einbuergerungen)), 
+            vjust = ifelse(data$Diff < 0, 1.5, -0.5 + ifelse(data$Einbuergerungen < 500, 0.4, ifelse(data$Monat == "Januar", 2.2, 0)))) +
+  labs(title = "Anzahl der monatlichen Einbürgerungen in Niedersachsen", x = "Monat", y = "Einbuergerungen") +
   theme_minimal() +  # Hintergrund weiß machen
   scale_x_discrete(guide = guide_axis(n.dodge = 2))  # Achsenabschnitte breiter machen
 
