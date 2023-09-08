@@ -26,3 +26,26 @@ data <- read_excel(data_url)
 
 ```
 
+# Einbürgerungen in Niedersachsen
+
+Die folgende Grafik zeigt die Entwicklung der Einbürgerungen in Niedersachsen in den vergangenen 12 Monaten.
+
+```{r Einbuergungen_Grafik, echo=FALSE, fig.cap="Anzahl der monatlichen Einbürgerungen in Niedersachsen"}
+library(ggplot2)
+
+# Die Monate in der richtigen Reihenfolge als Faktor erstellen
+data$Monat <- factor(data$Monat, levels = c("Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"))
+
+# Daten für die Berechnung der Differenzen vorbereiten
+data$Diff <- c(NA, diff(data$Einbürgerungen))
+
+ggplot(data, aes(x = Monat, y = Einbürgerungen, group = 1)) +
+  geom_line() +
+  geom_point() +  # Datenpunkte hinzufügen
+  geom_text(aes(label = round(Einbürgerungen)), 
+            vjust = ifelse(data$Diff < 0, 1.5, -0.5 + ifelse(data$Einbürgerungen < 500, 0.4, ifelse(data$Monat == "Januar", 2.2, 0)))) +
+  labs(title = "Anzahl der monatlichen Einbürgerungen in Niedersachsen", x = "Monat", y = "Einbürgerungen") +
+  theme_minimal() +  # Hintergrund weiß machen
+  scale_x_discrete(guide = guide_axis(n.dodge = 2))  # Achsenabschnitte breiter machen
+
+
