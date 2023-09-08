@@ -1,5 +1,5 @@
 ---
-title: "My document"
+title: "Tests"
 output: 
   github_document: default
   word_document: default
@@ -7,7 +7,7 @@ output:
   pdf_document: default
 ---
 
-Introduction
+# Introduction
 ---
 
-Some highly informative text, now with a clause.
+Word, Pdf, html, tex. Ich bin ja mal gespannt.
