@@ -16,7 +16,7 @@ jobs:
       - uses: r-lib/actions/setup-tinytex@v2
       - name: Install rmarkdown and readxl ggplot2 and utils
         run: |
-          Rscript -e 'install.packages(c("rmarkdown", "readxl", "ggplot2", "utils"))'
+          Rscript -e 'install.packages(c("rmarkdown", "readxl", "ggplot2", "utils", "tidyverse"))'
       - name: Render my document to all types
         run: Rscript -e 'rmarkdown::render("docs/my-document.Rmd", output_format = "all")'
       - name: Commit results
