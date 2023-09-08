@@ -13,7 +13,7 @@ output:
 Word, Pdf, html, tex. Ich bin ja mal gespannt.
 
 
-```{r, load_Einbuergerungen, echo = True}
+```{r, load_Einbuergerungen, echo = TRUE}
 library("readxl")
 
 library(readxl)
