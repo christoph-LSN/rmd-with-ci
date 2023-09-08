@@ -7,7 +7,7 @@ output:
   pdf_document: default
 ---
 
-# Introduction
+# Einführung
 ---
 
 Word, Pdf, html, tex. Ich bin ja mal gespannt.
