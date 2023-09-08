@@ -7,7 +7,7 @@ output:
   pdf_document: default
 ---
 
-# Einführung mit Grafik Jetzt aber
+# Einführung mit Grafik
 ---
 
 Word, Pdf, html, tex. Ich bin ja mal gespannt.
