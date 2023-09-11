@@ -58,7 +58,7 @@ excel_path <- "../data/bst_hochrechnung.xlsx"
 sheet_name <- "Zeitreihe Beschäftigte"
 
 # Daten einlesen aus den angegebenen Spalten
-bst_daten <- read_excel(excel_path, sheet = sheet_name, range = "A73:G173", col_names = FALSE) %>%
+bst_daten <- read_excel(excel_path, sheet = sheet_name, range = "A160:G173", col_names = FALSE) %>%
   select(...1, ...2, ...7)  # Nur die gewünschten Spalten auswählen
 
 # Spaltenüberschriften setzen
