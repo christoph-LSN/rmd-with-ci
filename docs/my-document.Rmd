@@ -4,6 +4,7 @@ output:
   github_document: default
   word_document: default
   html_document: default
+    number_sections: true
   pdf_document: default
 ---
 
