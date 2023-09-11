@@ -3,7 +3,7 @@ title: "V2"
 output: 
   github_document: default
   word_document:
-    reference_docx: "../docs/MDEtemplate.docx"
+    reference_docx: "../docs/MDE_template.docx"
     toc: true
     toc_levels: 2
   html_document:
