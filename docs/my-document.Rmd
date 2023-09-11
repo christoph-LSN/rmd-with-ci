@@ -3,10 +3,9 @@ title: "V2"
 output: 
   github_document: default
   word_document:
-    officer::word_document:
-      fig_width: 8
-      toc: true
-      toc_levels: 2
+    reference_docx: "../docs/MDEtemplate.docx"
+    toc: true
+    toc_levels: 2
   html_document:
     number_sections: true
     bookdown::html_document2:
