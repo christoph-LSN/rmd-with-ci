@@ -3,8 +3,12 @@ title: "V2"
 output: 
   github_document: default
   word_document: default
-  html_document: default
+  html_document:
     number_sections: true
+    bookdown::html_document2:
+      toc: true
+      toc_float: true
+      toc_depth: 2
   pdf_document: default
 ---
 
