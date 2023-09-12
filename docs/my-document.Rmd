@@ -4,7 +4,7 @@ output:
   github_document: default
   word_document: default
   flexdashboard::flex_dashboard: 
-    orientation: columns
+    orientation: rows
     vertical_layout: fill
   pdf_document: default
 ---
