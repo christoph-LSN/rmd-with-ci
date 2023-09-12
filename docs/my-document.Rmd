@@ -2,10 +2,7 @@
 title: "V2"
 output: 
   github_document: default
-  word_document:
-    reference_docx: "../docs/MDE_template.docx"
-    toc: true
-    toc_levels: 2
+  word_document: default
   html_document:
     number_sections: true
     bookdown::html_document2:
