@@ -108,19 +108,19 @@ Row
 
 ### Grafik 4
 
-```{r}
+```{r Grafik4 }
 # R-Chunk für Grafik 4
 ```
 
 ### Grafik 5
 
-```{r}
+```{r Grafik5}
 # R-Chunk für Grafik 5
 ```
 
 ### Grafik 6
 
-```{r}
+```{r Grafik6}
 # R-Chunk für Grafik 6
 ```
 
