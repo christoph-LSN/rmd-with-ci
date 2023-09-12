@@ -5,15 +5,12 @@ V2
 
 ### Grafik 1
 
-``` r
-# R-Chunk für Grafik 1
-```
+![Anzahl der monatlichen Einbuergerungen in
+Niedersachsen](my-document_files/figure-gfm/Einbuergungen_Grafik_1-1.png)
 
 ### Grafik 2
 
-``` r
-# R-Chunk für Grafik 2
-```
+![](my-document_files/figure-gfm/Beschaeftigte_Grafik-1.png)<!-- -->
 
 ### Grafik 3
 
@@ -23,22 +20,22 @@ V2
 
 ## Row
 
-### Grafik 1
+### Grafik 4
 
 ``` r
-# R-Chunk für Grafik 1
+# R-Chunk für Grafik 4
 ```
 
-### Grafik 2
+### Grafik 5
 
 ``` r
-# R-Chunk für Grafik 2
+# R-Chunk für Grafik 5
 ```
 
-### Grafik 3
+### Grafik 6
 
 ``` r
-# R-Chunk für Grafik 3
+# R-Chunk für Grafik 6
 ```
 
 ## \# Einführung mit Grafik
@@ -54,5 +51,3 @@ Niedersachsen in den vergangenen 12 Monaten.
 Niedersachsen](my-document_files/figure-gfm/Einbuergungen_Grafik-1.png)
 
 ## \## Beschäftigte
-
-![](my-document_files/figure-gfm/Beschaeftigte_Grafik-1.png)<!-- -->
