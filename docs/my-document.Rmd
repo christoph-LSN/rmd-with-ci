@@ -57,7 +57,7 @@ bst_daten <- read_excel(excel_path, sheet = sheet_name, range = "A160:G173", col
 col_names <- c("Zeit", "Deutschland", "Niedersachsen")
 colnames(bst_daten) <- col_names
 ```
-```{r Beschaeftigte_Grafik, echo=FALSE, message=FALSE}
+```{r Beschaeftigte-Grafik-1, echo=FALSE, message=FALSE}
 library(ggplot2)
 
 # Liniendiagramm erstellen
