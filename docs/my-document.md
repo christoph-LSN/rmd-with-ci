@@ -6,7 +6,7 @@ V2
 ### Grafik 1
 
 ![Anzahl der monatlichen Einbuergerungen in
-Niedersachsen](my-document_files/figure-gfm/Einbuergungen_Grafik_1-1.png)
+Niedersachsen](my-document_files/figure-gfm/Einbuergungen-Grafik-1-1.png)
 
 ### Grafik 2
 
