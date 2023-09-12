@@ -10,7 +10,7 @@ Niedersachsen](my-document_files/figure-gfm/Einbuergungen_Grafik_1-1.png)
 
 ### Grafik 2
 
-![](my-document_files/figure-gfm/Beschaeftigte_Grafik-1.png)<!-- -->
+![](my-document_files/figure-gfm/Beschaeftigte-Grafik-1-1.png)<!-- -->
 
 ### Grafik 3
 
@@ -51,3 +51,5 @@ Niedersachsen in den vergangenen 12 Monaten.
 Niedersachsen](my-document_files/figure-gfm/Einbuergungen_Grafik-1.png)
 
 ## \## Beschäftigte
+
+![](my-document_files/figure-gfm/Beschaeftigte_Grafik-1.png)<!-- -->
