@@ -17,6 +17,19 @@ Row
 # R-Chunk für Grafik 1
 ```
 
+### Grafik 2
+
+```{r}
+# R-Chunk für Grafik 2
+```
+
+### Grafik 3
+
+```{r}
+# R-Chunk für Grafik 3
+```
+
+
 # Einführung mit Grafik
 ---
 
