@@ -1,12 +1,14 @@
 ---
-title: "Flex-Dashboard"
+title: "V2"
 output: 
   github_document: default
   word_document: default
   flexdashboard::flex_dashboard: 
     orientation: columns
     vertical_layout: fill
-  pdf_document: default---
+  pdf_document: default
+---
+
 
 # Einführung mit Grafik
 ---
