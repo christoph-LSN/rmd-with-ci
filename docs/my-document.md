@@ -21,6 +21,26 @@ V2
 # R-Chunk für Grafik 3
 ```
 
+## Row
+
+### Grafik 1
+
+``` r
+# R-Chunk für Grafik 1
+```
+
+### Grafik 2
+
+``` r
+# R-Chunk für Grafik 2
+```
+
+### Grafik 3
+
+``` r
+# R-Chunk für Grafik 3
+```
+
 ## \# Einführung mit Grafik
 
 Word, Pdf, html, tex. Ich bin ja mal gespannt.
