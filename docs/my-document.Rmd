@@ -13,14 +13,50 @@ Row
 
 ### Grafik 1
 
-```{r}
-# R-Chunk für Grafik 1
+```{r Einbuergungen_Grafik, echo=FALSE, fig.cap="Anzahl der monatlichen Einbuergerungen in Niedersachsen"}
+library("ggplot2")
+
+# Laden Sie die CSV-Datei aus dem Ordner "data" im Repository
+data <- read.csv("../data/2022_Einbuergerung.csv", sep = ";")
+
+# Die Monate in der richtigen Reihenfolge als Faktor erstellen
+data$Monat <- factor(data$Monat, levels = c("Januar", "Februar", "Maerz", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"))
+
+# Daten für die Berechnung der Differenzen vorbereiten
+data$Diff <- c(NA, diff(data$Einbuergerungen))
+
+ggplot(data, aes(x = Monat, y = Einbuergerungen)) +
+  geom_point() +  # Datenpunkte hinzufügen
+  geom_text(aes(label = round(Einbuergerungen)), 
+            vjust = ifelse(data$Diff < 0, 1.5, -0.5 + ifelse(data$Einbuergerungen < 500, 0.4, ifelse(data$Monat == "Januar", 2.2, 0)))) +
+  labs(title = "Anzahl der monatlichen Einbürgerungen in Niedersachsen", x = "Monat", y = "Einbuergerungen") +
+  theme_minimal() +  # Hintergrund weiß machen
+  scale_x_discrete(guide = guide_axis(n.dodge = 2))  # Achsenabschnitte breiter machen
+
+
+
 ```
 
 ### Grafik 2
 
-```{r}
-# R-Chunk für Grafik 2
+```{r load_bst_daten, echo = FALSE, message=FALSE}
+
+library(readxl)
+library(tidyverse)
+
+# Pfad zur Excel-Datei im "data" -Ordner
+excel_path <- "../data/bst_hochrechnung.xlsx"
+
+# Tabellenblattname
+sheet_name <- "Zeitreihe Beschäftigte"
+
+# Daten einlesen aus den angegebenen Spalten
+bst_daten <- read_excel(excel_path, sheet = sheet_name, range = "A160:G173", col_names = FALSE) %>%
+  select(...1, ...2, ...7)  # Nur die gewünschten Spalten auswählen
+
+# Spaltenüberschriften setzen
+col_names <- c("Zeit", "Deutschland", "Niedersachsen")
+colnames(bst_daten) <- col_names
 ```
 
 ### Grafik 3
@@ -32,22 +68,22 @@ Row
 Row
 -----------------------------------------------------------------------
 
-### Grafik 1
+### Grafik 4
 
 ```{r}
-# R-Chunk für Grafik 1
+# R-Chunk für Grafik 4
 ```
 
-### Grafik 2
+### Grafik 5
 
 ```{r}
-# R-Chunk für Grafik 2
+# R-Chunk für Grafik 5
 ```
 
-### Grafik 3
+### Grafik 6
 
 ```{r}
-# R-Chunk für Grafik 3
+# R-Chunk für Grafik 6
 ```
 
 
