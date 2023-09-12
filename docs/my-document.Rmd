@@ -159,5 +159,40 @@ colnames(bst_daten) <- col_names
 
 ## Beschäftigte
 ---
+```{r load_bst_daten, echo = FALSE, message=FALSE}
 
+library(readxl)
+library(tidyverse)
+
+# Pfad zur Excel-Datei im "data" -Ordner
+excel_path <- "../data/bst_hochrechnung.xlsx"
+
+# Tabellenblattname
+sheet_name <- "Zeitreihe Beschäftigte"
+
+# Daten einlesen aus den angegebenen Spalten
+bst_daten <- read_excel(excel_path, sheet = sheet_name, range = "A160:G173", col_names = FALSE) %>%
+  select(...1, ...2, ...7)  # Nur die gewünschten Spalten auswählen
+
+# Spaltenüberschriften setzen
+col_names <- c("Zeit", "Deutschland", "Niedersachsen")
+colnames(bst_daten) <- col_names
+```
+```{r Beschaeftigte_Grafik, echo=FALSE, message=FALSE}
+library(ggplot2)
+
+# Liniendiagramm erstellen
+ggplot(bst_daten, aes(x = Zeit)) +
+  geom_line(aes(y = Deutschland, color = "Deutschland"), show.legend = FALSE) +
+  geom_point(aes(y = Deutschland, color = "Deutschland"), show.legend = FALSE) +
+  geom_line(aes(y = Niedersachsen, color = "Niedersachsen"), show.legend = FALSE) +
+  geom_point(aes(y = Niedersachsen, color = "Niedersachsen"), show.legend = FALSE) +
+  labs(title = "Beschäftigungsentwicklung in Deutschland und Niedersachsen",
+       x = "Zeit", y = "Beschäftigte",
+       caption = "Sozialversicherungspflichtig und ausschließlich geringfügig Beschäftigte") +
+  scale_color_manual(values = c("Deutschland" = "blue", "Niedersachsen" = "red")) +
+  theme_minimal() +
+  scale_y_continuous(labels = function(x) format(x, big.mark = ".", decimal.mark = ",", scientific = FALSE), limits = c(0, NA))
+
+```
 
