@@ -15,8 +15,20 @@ Niedersachsen](my-document_files/figure-gfm/Einbuergungen-Grafik-1-1.png)
 ### Grafik 3
 
 ``` r
-# R-Chunk für Grafik 3
+# Daten erstellen
+data <- data.frame(x = 1:5, y = c(2, 4, 1, 6, 3))
+
+# Plot erstellen
+library(ggplot2)
+plot <- ggplot(data, aes(x, y)) +
+  geom_point() +
+  labs(title = "Einfaches Beispielgrafik", x = "X-Achse", y = "Y-Achse")
+
+# Die Grafik anzeigen
+print(plot)
 ```
+
+![](my-document_files/figure-gfm/Grafik3-1.png)<!-- -->
 
 ## Row
 
