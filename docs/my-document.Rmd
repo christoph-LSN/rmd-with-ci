@@ -137,7 +137,7 @@ ggplot(data, aes(x = Monat, y = Einbuergerungen)) +
 
 
 ```
-```{r load_bst_daten, echo = FALSE, message=FALSE}
+```{r load_bst_daten_1, echo = FALSE, message=FALSE}
 
 library(readxl)
 library(tidyverse)
