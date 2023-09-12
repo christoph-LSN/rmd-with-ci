@@ -13,7 +13,7 @@ Row
 
 ### Grafik 1
 
-```{r Einbuergungen_Grafik_1, echo=FALSE, fig.cap="Anzahl der monatlichen Einbuergerungen in Niedersachsen"}
+```{r Einbuergungen-Grafik-1, echo=FALSE, fig.cap="Anzahl der monatlichen Einbuergerungen in Niedersachsen"}
 library("ggplot2")
 
 # Laden Sie die CSV-Datei aus dem Ordner "data" im Repository
@@ -25,13 +25,16 @@ data$Monat <- factor(data$Monat, levels = c("Januar", "Februar", "Maerz", "April
 # Daten für die Berechnung der Differenzen vorbereiten
 data$Diff <- c(NA, diff(data$Einbuergerungen))
 
+# Die Grafik anzeigen
 print(ggplot(data, aes(x = Monat, y = Einbuergerungen)) +
-  geom_point() +
+  geom_point() +  # Datenpunkte hinzufügen
   geom_text(aes(label = round(Einbuergerungen)), 
             vjust = ifelse(data$Diff < 0, 1.5, -0.5 + ifelse(data$Einbuergerungen < 500, 0.4, ifelse(data$Monat == "Januar", 2.2, 0)))) +
   labs(title = "Anzahl der monatlichen Einbürgerungen in Niedersachsen", x = "Monat", y = "Einbuergerungen") +
-  theme_minimal() +
-  scale_x_discrete(guide = guide_axis(n.dodge = 2)))
+  theme_minimal() +  # Hintergrund weiß machen
+  scale_x_discrete(guide = guide_axis(n.dodge = 2))  # Achsenabschnitte breiter machen
+)
+
 
 #ggplot(data, aes(x = Monat, y = Einbuergerungen)) +
 #  geom_point() +  # Datenpunkte hinzufügen
