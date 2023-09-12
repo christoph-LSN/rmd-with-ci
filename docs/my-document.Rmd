@@ -8,7 +8,14 @@ output:
     vertical_layout: fill
   pdf_document: default
 ---
+Row
+-----------------------------------------------------------------------
 
+### Grafik 1
+
+```{r}
+# R-Chunk für Grafik 1
+```
 
 # Einführung mit Grafik
 ---
