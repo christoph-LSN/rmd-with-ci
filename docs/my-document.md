@@ -1,6 +1,14 @@
 V2
 ================
 
+## Row
+
+### Grafik 1
+
+``` r
+# R-Chunk für Grafik 1
+```
+
 ## \# Einführung mit Grafik
 
 Word, Pdf, html, tex. Ich bin ja mal gespannt.
