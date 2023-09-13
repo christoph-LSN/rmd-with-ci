@@ -15,7 +15,7 @@ header-includes:
 
 
 
-```{r setup, include=FALSE}
+```{r setup, include=TRUE}
 library(flexdashboard)
 library(ggplot2)
 ```
