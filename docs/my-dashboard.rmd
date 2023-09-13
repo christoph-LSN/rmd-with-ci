@@ -1,5 +1,5 @@
 ---
-title: "Einfaches Flexdashboard-Beispiel"
+title: "Einfaches Flexdashboard"
 output: 
   flexdashboard::flex_dashboard:
     orientation: rows
