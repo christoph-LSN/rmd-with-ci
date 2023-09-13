@@ -1,5 +1,5 @@
 ---
-title: "Einfaches Flexdashboard"
+title: "MDE"
 output: 
   flexdashboard::flex_dashboard:
     orientation: rows
