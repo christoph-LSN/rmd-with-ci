@@ -7,7 +7,7 @@ name: Render my dashboard
 
 jobs:
   render:
-    name: Render my document
+    name: Render my dashboard
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v2
@@ -17,10 +17,10 @@ jobs:
       - name: Install rmarkdown and readxl ggplot2 and utils
         run: |
           Rscript -e 'install.packages(c("rmarkdown", "readxl", "ggplot2", "utils", "tidyverse", "flexdashboard"))'
-      - name: Render my document to all types
-        run: Rscript -e 'rmarkdown::render("docs/my-dashboard.Rmd", output_format = "all")'
+      - name: Render my dashboard to all types
+        run: Rscript -e 'rmarkdown::render("docs/my-dashboard.rmd", output_format = "all")'
       - name: Commit results
         run: |
-          git add docs/my-document*
-          git commit -m 'Re-build my-document' || echo "No changes to commit"
+          git add docs/my-dashboard*
+          git commit -m 'Re-build my-dashboard' || echo "No changes to commit"
           git push origin || echo "No changes to commit"
