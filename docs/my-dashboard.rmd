@@ -4,12 +4,30 @@ output:
   flexdashboard::flex_dashboard:
     orientation: columns
     vertical_layout: fill
+    source_code: embed
 ---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(ggplot2)
+```
+
 
 Row
 -----------------------------------------------------------------------
 
 ### Einbürgerungen nach Niedersachsen
+```{r popup}
+output$Einbuergungen_Grafik_1 <- renderPrint({
+  showModal(modalDialog(
+    plotOutput("plot1", click = "plot1_click"),
+    title = "Grafik 1"
+  ))
+})
+
+plotOutput("plot1")
+
+```
 
 ```{r Einbuergungen-Grafik-1, echo=FALSE, fig.cap="Anzahl der monatlichen Einbuergerungen in Niedersachsen"}
 library("ggplot2")
