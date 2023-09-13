@@ -2,7 +2,7 @@
 title: "MDE"
 output: 
   flexdashboard::flex_dashboard:
-    orientation: columns  # Hier wurde "rows" in "columns" geändert
+    orientation: columns
     vertical_layout: fill
 ---
 
@@ -14,6 +14,9 @@ Row
 ### Hier können Sie R-Code für Grafik 2 hinzufügen
 
 ### Hier können Sie R-Code für Grafik 3 hinzufügen
+
+Row
+-----------------------------------------------------------------------
 
 ### Hier können Sie R-Code für Grafik 4 hinzufügen
 
