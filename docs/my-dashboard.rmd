@@ -9,6 +9,11 @@ header-includes:
   - <script src="popup.js"></script>
 ---
 
+<div id="Einbuergungen-Grafik-1">
+  <img src="Einbuergungen_Grafik_1.png" class="thumbnail">
+</div>
+
+
 
 ```{r setup, include=FALSE}
 library(flexdashboard)
