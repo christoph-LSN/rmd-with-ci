@@ -1,9 +1,9 @@
 on:
   push:
     paths:
-      - docs/my-document.Rmd
+      - docs/my-dashboard.Rmd
 
-name: Render my document
+name: Render my dashboard
 
 jobs:
   render:
