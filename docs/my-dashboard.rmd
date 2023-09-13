@@ -1,1 +1,22 @@
+---
+title: "Einfaches Flexdashboard-Beispiel"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    vertical_layout: fill
+---
 
+# Sidebar {.sidebar}
+
+# Hier können Sie R-Code für Grafik 1 hinzufügen
+# Hier können Sie R-Code für Grafik 2 hinzufügen
+# Hier können Sie R-Code für Grafik 3 hinzufügen
+
+
+Row
+-----------------------------------------------------------------------
+
+
+# Hier können Sie R-Code für Grafik 4 hinzufügen
+# Hier können Sie R-Code für Grafik 5 hinzufügen
+# Hier können Sie R-Code für Grafik 6 hinzufügen
