@@ -4,8 +4,11 @@ output:
   flexdashboard::flex_dashboard:
     orientation: columns
     vertical_layout: fill
-    source_code: embed
+runtime: shiny
+header-includes:
+  - <script src="popup.js"></script>
 ---
+
 
 ```{r setup, include=FALSE}
 library(flexdashboard)
