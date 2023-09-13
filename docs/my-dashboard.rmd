@@ -12,6 +12,17 @@ library(flexdashboard)
 library(ggplot2)
 ```
 
+```javascript
+$(document).ready(function() {
+  // Binden Sie die Klickfunktion an die Grafiken
+  $("#Einbuergungen-Grafik-1 .thumbnail").click(function() {
+    var imgSrc = $("#Einbuergungen-Grafik-1 img").attr("src");
+    showModalDialog(imgSrc, "Grafik 1");
+  });
+
+  // Fügen Sie ähnliche Funktionen für die anderen Grafiken hinzu, falls erforderlich
+});
+```
 
 Row
 -----------------------------------------------------------------------
