@@ -6,6 +6,10 @@ output:
     vertical_layout: fill
 ---
 
+Row
+-----------------------------------------------------------------------
+
+
 # Hier können Sie R-Code für Grafik 1 hinzufügen
 # Hier können Sie R-Code für Grafik 2 hinzufügen
 # Hier können Sie R-Code für Grafik 3 hinzufügen
